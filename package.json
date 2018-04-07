@@ -1,0 +1,70 @@
+{
+  "name": "pepelats",
+  "description": "A Vue.js project",
+  "version": "1.0.0",
+  "author": "o.evteev",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "heroku-postbuild": "npm run build",
+    "dev": "cross-env NODE_ENV=development PORT=5000 DEBUG=server:* nodemon --config nodemon.json --watch server --exec babel-node server/index.js",
+    "start": "cross-env PORT=5000 & babel-node server/index.js",
+    "build": "node build/build.js",
+    "test": "babel-node spec/run.js"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "body-parser": "^1.18.2",
+    "compression-webpack-plugin": "^1.1.11",
+    "connect-history-api-fallback": "^1.5.0",
+    "debug": "^3.1.0",
+    "express": "^4.16.3",
+    "mini-toastr": "^0.8.0",
+    "morgan": "^1.9.0",
+    "update": "^0.7.4",
+    "vue": "^2.5.11",
+    "vue-notifications": "^0.9.0",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1",
+    "vuex-router-sync": "^5.0.0",
+    "webpack": "^4.4.1",
+    "webpack-cli": "^2.0.13",
+    "webpack-dev-middleware": "^3.1.0",
+    "webpack-dev-server": "^3.1.1",
+    "webpack-hot-middleware": "^2.21.2",
+    "webpack-merge": "^4.1.2"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.0",
+    "cross-env": "^5.1.4",
+    "css-loader": "^0.28.11",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-vue": "^2.0.2",
+    "eslint-plugin-import": "^2.10.0",
+    "eslint-plugin-vue": "^4.4.0",
+    "file-loader": "^1.1.11",
+    "node-osascript": "^2.0.0",
+    "nodemon": "^1.17.3",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
+    "vue-loader": "^14.2.2",
+    "vue-template-compiler": "^2.5.16"
+  },
+  "eslintConfig": {
+    "extends": "vue",
+    "env": {
+      "node": true
+    },
+    "root": true
+  }
+}
