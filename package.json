@@ -28,7 +28,6 @@
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1",
     "vuex-router-sync": "^5.0.0",
-    "webpack": "^4.4.1",
     "webpack-cli": "^2.0.13",
     "webpack-dev-middleware": "^3.1.0",
     "webpack-dev-server": "^3.1.1",
@@ -58,7 +57,8 @@
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
     "vue-loader": "^14.2.2",
-    "vue-template-compiler": "^2.5.16"
+    "vue-template-compiler": "^2.5.16",
+    "webpack": "^4.4.1"
   },
   "engines": {
     "node": ">= 9.5.0",
