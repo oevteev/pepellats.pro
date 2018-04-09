@@ -1,6 +1,6 @@
 var path = require('path')
 var webpack = require('webpack')
-var CompressionPlugin = require('compression-webpack-plugin')
+var CompressionPlugin = require("compression-webpack-plugin")
 
 module.exports = {
   entry: [
@@ -37,7 +37,7 @@ module.exports = {
         loader: 'file-loader',
         options: {
           limit: 10000,
-          name: '[name].[ext]?[hash]'
+          name: 'img/[name].[ext]?[hash]'
         }
       }
     ]
@@ -55,24 +55,9 @@ module.exports = {
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
-    /*
-     new webpack.optimize.UglifyJsPlugin({
-      beautify: false,
-      comments: false,
-      compress: {
-        sequences : true,
-        booleans : true,
-        loops : true,
-        unused : true,
-        warnings : false,
-        drop_console: true,
-        unsafe : true
-      }
-    }),
-    */
     new CompressionPlugin({
-      asset: '[path].gz[query]',
-      algorithm: 'gzip',
+      asset: "[path].gz[query]",
+      algorithm: "gzip",
       test: /\.(js|css|html|svg|png)$/,
       threshold: 10240,
       minRatio: 0.8
