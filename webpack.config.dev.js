@@ -1,6 +1,6 @@
 var path = require('path')
 var webpack = require('webpack')
-var CompressionPlugin = require("compression-webpack-plugin")
+var CompressionPlugin = require('compression-webpack-plugin')
 
 module.exports = {
   entry: [
@@ -70,9 +70,9 @@ module.exports = {
       }
     }),
     */
-     new CompressionPlugin({
-      asset: "[path].gz[query]",
-      algorithm: "gzip",
+    new CompressionPlugin({
+      asset: '[path].gz[query]',
+      algorithm: 'gzip',
       test: /\.(js|css|html|svg|png)$/,
       threshold: 10240,
       minRatio: 0.8
