@@ -6,10 +6,8 @@
 </template>
 
 <script>
-import topMenu from "./components/topMenu.vue"
-import {router} from "./app"
-
-
+  import topMenu from "./components/topMenu.vue"
+  import {router} from "./app"
 export default {
   data() {
     return {

@@ -1,14 +1,14 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import App from './app.vue'
-import VueNotifications from 'vue-notifications'
-import options from './system/vueNotifications'
+
 import { routes } from './system/routes'
 import { sync } from 'vuex-router-sync'
 import store from './store/index'
+import Notifications from 'vue-notification'
 
 Vue.use(VueRouter)
-Vue.use(VueNotifications, options)
+Vue.use(Notifications)
 
 export const router = new VueRouter({
   mode: 'history',
