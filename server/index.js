@@ -7,6 +7,8 @@ import session from 'express-session'
 import KnexSessionStore from 'connect-session-knex'
 import db from './controllers/config/knex'
 import devOptions from './controllers/config/dev.serv.opt'
+import history from 'connect-history-api-fallback'
+// routes
 import auth from './routes/auth'
 
 const SessionStore = KnexSessionStore(session)
@@ -14,15 +16,13 @@ const store = new SessionStore({
   knex: db,
   tablename: 'session'
 })
-
 const debug = Debug('server:app')
 const port = process.env.PORT || 5000
 const app = express()
 
-// app.use(history())
 app.use(bodyParser.json())
 app.use(morgan('dev'))
-app.use('/dist', express.static('dist'))
+app.use(history())
 
 app.use(session({
   secret: 'secret',
@@ -33,7 +33,7 @@ app.use(session({
 
 devOptions(app)
 
-// Routes
+// ROUTES
 app.use('/api/auth', auth)
 
 app.get('/*', (req, res) => {
@@ -41,9 +41,3 @@ app.get('/*', (req, res) => {
 })
 
 app.listen(port, () => debug('Server listen on port =', port, 'ENV =', process.env.NODE_ENV))
-
-/*
-app.listen(port, () => {
-  console.log('Server running at:', port, 'ENV =', process.env.NODE_ENV)
-}).on('error', err => { console.log('Err!', err) } )
-*/

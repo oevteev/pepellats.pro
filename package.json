@@ -11,9 +11,9 @@
   },
   "scripts": {
     "heroku-postbuild": "npm run build",
-    "dev": "cross-env NODE_ENV=development PORT=5000 DEBUG=server:* nodemon --config nodemon.json --watch server --exec babel-node server/index.js",
-    "start": "cross-env PORT=5000 & babel-node server/index.js",
-    "build": "webpack --progress --hide-modules",
+    "dev": "cross-env DEBUG=server:* nodemon --config nodemon.json --watch server --exec babel-node server/index.js",
+    "start": "babel-node server/index.js",
+    "build": "node build/build.js",
     "test": "babel-node spec/run.js"
   },
   "dependencies": {
@@ -27,7 +27,6 @@
     "express": "^4.16.3",
     "express-session": "^1.15.6",
     "knex": "^0.14.5",
-    "mini-toastr": "^0.8.0",
     "morgan": "^1.9.0",
     "pg": "^7.4.1",
     "validator": "^9.4.1",
@@ -58,14 +57,20 @@
     "eslint-plugin-import": "^2.10.0",
     "eslint-plugin-jasmine": "^2.9.3",
     "eslint-plugin-vue": "^4.4.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^1.1.11",
+    "friendly-errors-webpack-plugin": "^1.7.0",
+    "html-webpack-plugin": "^3.2.0",
     "jasmine": "^3.1.0",
     "node-osascript": "^2.0.0",
     "nodemon": "^1.17.3",
+    "optimize-css-assets-webpack-plugin": "^4.0.0",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
+    "url-loader": "^1.0.1",
     "vue-loader": "^14.2.2",
-    "webpack": "^4.5.0"
+    "webpack": "^4.5.0",
+    "webpack-merge": "^4.1.2"
   },
   "eslintConfig": {
     "extends": "vue",
