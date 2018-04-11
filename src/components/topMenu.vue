@@ -4,7 +4,7 @@
       <img src="../assets/img/logo_black.png">
     </div>
     <div class="menu">
-      <router-link tag="a" to="/vuejs">VueJS</router-link>
+      <router-link tag="a" to="/vuejs">VueJS ver.2.2</router-link>
       <router-link tag="a" to="/cpp">C++</router-link>
       <router-link tag="a" to="/js">JS</router-link>
       <router-link tag="a" to="/linux">Linux</router-link>
