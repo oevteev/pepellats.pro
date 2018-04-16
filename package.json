@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "heroku-postbuild": "npm run build",
-    "dev": "nodemon --config nodemon.json --watch server --exec DEBUG=server:* babel-node server/index.js",
+    "dev": "cross-env DEBUG=server:* nodemon --config nodemon.json --watch server --exec babel-node server/index.js",
     "start": "babel-node server/index.js",
     "build": "node build/build.js",
     "test": "babel-node spec/run.js"
@@ -44,6 +44,7 @@
     "chai-http": "^3.0.0",
     "chalk": "^2.0.1",
     "compression-webpack-plugin": "^1.0.0",
+    "cross-env": "^5.1.4",
     "css-loader": "^0.28.0",
     "eslint": "^4.3.0",
     "eslint-config-vue": "^2.0.2",
