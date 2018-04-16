@@ -11,6 +11,9 @@ module.exports = merge(baseWebpackConfig, {
     rules: utils.styleLoaders({ sourceMap: config.dev.cssSourceMap })
   },
   devtool: '#cheap-module-eval-source-map',
+  devServer: {
+        overlay: true
+    },
   plugins: [
     new webpack.DefinePlugin({
       'process.env': config.dev.env

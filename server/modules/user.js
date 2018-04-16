@@ -1,7 +1,7 @@
 import Debug from 'debug'
 import bcrypt from 'bcrypt'
 import isEmpty from 'lodash/isEmpty'
-import db from '../../controllers/config/knex'
+import db from '../controllers/config/knex'
 
 const debug = Debug('server: module: >> user')
 

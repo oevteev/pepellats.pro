@@ -1,15 +1,16 @@
-import heroku from './heroku'
+import servConnect from './serv.connect'
 import knex from 'knex'
 
 const knexConfig = {
   client: 'pg',
   connection: {
-    user: heroku.user,
-    password: heroku.password,
-    host: heroku.host,
-    port: heroku.port,
-    database: heroku.database,
-    ssl: true,
+    user: servConnect.user,
+    password: servConnect.password,
+    host: servConnect.host,
+    port: servConnect.port,
+    database: servConnect.database,
+   // ssl: true,
+    ssl: servConnect.ssl,
     max: 100
   },
   pool: {
