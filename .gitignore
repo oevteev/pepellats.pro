@@ -18,5 +18,8 @@ node_modules/
 package-lock.json
 .idea/
 .idea/workspace.xml
+workspace.xml
+*.xml
+*.iml
 server/controllers/config/serv.connect.opt.js
 
