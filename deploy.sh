@@ -21,5 +21,6 @@ git push heroku master -f
 #git pull
 #sh deploy.sh
 
+## OR 3.
 # git push -f origin master
 # git push -f heroku master
