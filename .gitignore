@@ -17,6 +17,5 @@ node_modules/
 .npm
 package-lock.json
 .idea
-*.xml
 server/controllers/config/serv.connect.opt.js
 
