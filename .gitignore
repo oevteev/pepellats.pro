@@ -17,4 +17,6 @@ build/Release
 node_modules/
 .npm
 package-lock.json
-.idea/*.*
+.idea/
+.idea/workspace.xml
+
