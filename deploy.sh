@@ -2,6 +2,8 @@ git add .
 git commit -am "Deploy in Heroku"
 git push heroku master -f
 
+## If deploy to heroku have to comment code in 'serv.connect.js'
+
 ##!! git push heroku master says “Everything up-to-date”, but the app is not current !!!!
 ## see https://stackoverflow.com/questions/21947406/git-push-heroku-master-says-everything-up-to-date-but-the-app-is-not-current
 

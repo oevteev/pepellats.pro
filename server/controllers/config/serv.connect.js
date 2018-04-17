@@ -1,7 +1,7 @@
 import url from 'url'
 //import Debug from 'debug'
 
-// !!!! to comment if deploy to heroku !!!!
+// !!!! if deploy to heroku have to comment next line !!!!
 import connectConfig from './serv.connect.opt'
 
 if (!process.env.NODE_ENV) process.env.NODE_ENV = 'test'
@@ -21,11 +21,9 @@ if (process.env.NODE_ENV === 'production') {
     servConnect.port = params.port
     servConnect.database = params.pathname.split('/')[1]
     servConnect.ssl = true
-
 }
 
-// !!!! to comment block if deploy to heroku !!!!
-
+// !!!! if deploy to heroku have to comment next block  !!!!
 if (process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'test')
 {
     servConnect.user = connectConfig.user
@@ -41,8 +39,6 @@ if (process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'test')
 
 
 // debug('Heroku :  host =',  servConnect.host, 'db =',  servConnect.database)
-
-
 /*
 if (process.env.NODE_ENV === 'production') {
   const params = url.parse(process.env.DATABASE_URL)
@@ -59,18 +55,12 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 if (process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'test') {
-
-  //  const params = url.parse(process.env.DATABASE_URL)
-
     servConnect.host = 'localhost'
     servConnect.user = 'postgres'
     servConnect.password = '...'
     servConnect.port = 5432
     servConnect.database = 'Test1'
     servConnect.ssl = false;
-
-    debug('Heroku development:  host =',  servConnect.host, 'db =',  servConnect.database)
-   // debug('DB_URL=', process.env.DATABASE_URL)
 }
 */
 
