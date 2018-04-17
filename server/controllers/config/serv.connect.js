@@ -2,7 +2,7 @@ import url from 'url'
 //import Debug from 'debug'
 
 // !!!! to comment if deploy to heroku !!!!
-//import connectConfig from './serv.connect.opt'
+import connectConfig from './serv.connect.opt'
 
 if (!process.env.NODE_ENV) process.env.NODE_ENV = 'test'
 
@@ -25,7 +25,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 // !!!! to comment block if deploy to heroku !!!!
-/*
+
 if (process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'test')
 {
     servConnect.user = connectConfig.user
@@ -36,7 +36,7 @@ if (process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'test')
     servConnect.database = connectConfig.database
     servConnect.ssl = connectConfig.extra.ssl
 }
-*/
+
 
 
 
