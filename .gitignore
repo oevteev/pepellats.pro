@@ -16,10 +16,7 @@ build/Release
 node_modules/
 .npm
 package-lock.json
-.idea/
-.idea/workspace.xml
-workspace.xml
+.idea
 *.xml
-*.iml
 server/controllers/config/serv.connect.opt.js
 
