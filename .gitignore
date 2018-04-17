@@ -1,7 +1,6 @@
 .DS_Store
 .dist
 nodemon.json
-server/controllers/config/serv.connect.opt.js
 logs
 *.log
 npm-debug.log*
@@ -19,4 +18,5 @@ node_modules/
 package-lock.json
 .idea/
 .idea/workspace.xml
+server/controllers/config/serv.connect.opt.js
 
