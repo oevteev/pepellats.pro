@@ -10,7 +10,6 @@ const servConnect = {}
 
 //const debug = Debug('server:servConnect')
 
-
 if (process.env.NODE_ENV === 'production') {
     const params = url.parse(process.env.DATABASE_URL)
     const auth = params.auth.split(':')
@@ -35,33 +34,5 @@ if (process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'test')
     servConnect.ssl = connectConfig.extra.ssl
 }
 
-
-
-
-// debug('Heroku :  host =',  servConnect.host, 'db =',  servConnect.database)
-/*
-if (process.env.NODE_ENV === 'production') {
-  const params = url.parse(process.env.DATABASE_URL)
-
-  const auth = params.auth.split(':')
-  servConnect.user = auth[0]
-  servConnect.password = auth[1]
-  servConnect.host = params.hostname
-  servConnect.port = params.port
-  servConnect.database = params.pathname.split('/')[1]
-  servConnect.ssl = true
-
-  debug('Heroku production:  host =',  servConnect.host, 'db =',  servConnect.database)
-}
-
-if (process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'test') {
-    servConnect.host = 'localhost'
-    servConnect.user = 'postgres'
-    servConnect.password = '...'
-    servConnect.port = 5432
-    servConnect.database = 'Test1'
-    servConnect.ssl = false;
-}
-*/
 
 export default servConnect
